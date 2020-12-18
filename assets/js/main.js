@@ -9,14 +9,14 @@ let theWheel = new Winwheel({
                 'pointerAngle' : 100,
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and text colour overridden on backrupt segments.
-                   {'fillStyle' : '#edcfd7', 'text' : 'SURPRISE ME', 'textFontSize' : 14, 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#eea4b1', 'text' : '010 VG', 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#edcfd7', 'text' : '600'},
-                   {'fillStyle' : '#eea4b1', 'text' : '750'},
-                   {'fillStyle' : '#edcfd7', 'text' : '500'},
-                   {'fillStyle' : '#eea4b1', 'text' : 'BANKRUPT', 'textFontSize' : 16, 'textFillStyle' : '#ffffff'},
-                   {'fillStyle' : '#edcfd7', 'text' : '3000'},
-                   {'fillStyle' : '#eea4b1', 'text' : '600'}
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : 'SURPRISE ME', 'textFontSize' : 14, 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010 VG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09 VG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08 VG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010 VG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09 VG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08 VG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010 VG', 'textFillStyle' : '#000'}
                 ],
                 'animation' :           // Specify the animation to use.
                 {

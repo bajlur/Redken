@@ -314,7 +314,15 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
         font-size: 25px;
     }
     .spin-box::before {
-        right: -6px;
+        right: 21px;
+    }
+    .btn-tap
+    {
+        font-size: 35px;
+    }
+    .canvas
+    {
+        width: 350px;
     }
 }
 @media only screen and (max-width: 420px)
@@ -342,10 +350,7 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
         left: -38px;
         width: 51px;
     }
-    .canvas
-    {
-        width: 350px;
-    }
+    
     .spin-middil
     {
         height: 140px;
