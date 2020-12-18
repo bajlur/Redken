@@ -22,7 +22,7 @@ let theWheel = new Winwheel({
                 {
                     'type'     : 'spinToStop',
                     'duration' : 10,
-                    'spins'    : 3,
+                    'spins'    : 5,
                     'callbackFinished' : alertPrize,  // Function to call whent the spinning has stopped.
                     'callbackSound'    : playSound,   // Called when the tick sound is to be played.
                     'soundTrigger'     : 'pin'        // Specify pins are to trigger the sound.
@@ -35,7 +35,10 @@ let theWheel = new Winwheel({
                     'responsive' : true
                 }
             });
- 
+            
+            let wheelPower    = 10;
+            let wheelSpinning = false;
+            
             // Loads the tick audio sound in to an audio object.
             let audio = new Audio('http://dougtesting.net//elements/sound/tick.mp3');
  
@@ -50,8 +53,7 @@ let theWheel = new Winwheel({
                 audio.play();
             }
 
-             let wheelPower    = 10;
-            let wheelSpinning = false;
+             
 
             function startSpin()
           {

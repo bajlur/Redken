@@ -185,7 +185,7 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 30px 50px 30px 0;
+        border-width: 20px 40px 20px 0;
         border-color: transparent #8f8f8f transparent transparent;
         transform: translateY(-50%);
     }
@@ -248,6 +248,22 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
     {
         padding: 15px 30px;
     }
+    .spin-middil
+    {
+        height: 158px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -52%);
+    }
+    
+}
+@media only screen and (max-width: 600px) and (min-width: 590px)
+{
+    .spin-box::before
+    {
+        right: 30px;
+    }
 }
 @media only screen and (max-width: 540px)
 {
@@ -260,9 +276,8 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
         margin: 40px 30px;
         
     }
-    .spin-box:before
-    {
-        right: 0;
+    .spin-box::before {
+        right: 20px;
     }
     .modal-body h1
     {
@@ -276,6 +291,12 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
      {
         padding: 10px 15px;
      }
+}
+@media only screen and (max-width: 480px)
+{
+    .spin-box::before {
+        right: 8px;
+    }
 }
 @media only screen and (max-width: 460px)
 {
@@ -291,6 +312,9 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
     .modal-body h2
     {
         font-size: 25px;
+    }
+    .spin-box::before {
+        right: -6px;
     }
 }
 @media only screen and (max-width: 420px)
@@ -321,5 +345,13 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
     .canvas
     {
         width: 350px;
+    }
+    .spin-middil
+    {
+        height: 140px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -59%);
     }
 }
