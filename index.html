@@ -23,7 +23,7 @@
             <h2>We Want you to be the first to try our <span>new</span> shades eq baby blonde toners!</h2>
 
             <div class="btns-box text-center">
-                <button class="btn btn-tap" data-toggle="modal" data-target="#winModal"><img src="assets/images/hand-cursor.png" alt="#" class="hand-cursor">Tap Here</button>
+                <button class="btn btn-tap" data-toggle="modal"  onClick="calculatePrize();"><img src="assets/images/hand-cursor.png" alt="#" class="hand-cursor">Tap Here</button>
             </div>
 
             <h1 class="last-h1">To spin the <br> <span>Wheel of Shades</span></h1>
@@ -34,10 +34,10 @@
 
 
             <div class="spin-box text-center">
-                <canvas id='canvas' class="canvas" width='400' height='400' onClick="startSpin();">
+                <canvas id='canvas' class="canvas" width='400' height='400' onClick="calculatePrize();">
                     Canvas not supported, use another browser.
                 </canvas>
-                <img src="assets/images/spin-middil-img.png" alt="#" class="spin-middil img-fluid" onClick="startSpin();">
+                <img src="assets/images/spin-middil-img.png" alt="#" class="spin-middil img-fluid" onClick="calculatePrize();">
             </div>
 
         </div>

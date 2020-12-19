@@ -6,7 +6,7 @@ let theWheel = new Winwheel({
                 'responsive'   : true,
                 'textAlignment'   : 'center',    // Align text to outside of wheel.
                 'numSegments'     : 8,         // Specify number of segments.
-                'pointerAngle' : 100,
+                'pointerAngle' : 90,
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and text colour overridden on backrupt segments.
                    {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : 'SURPRISE ME', 'textFontSize' : 14, 'textFillStyle' : '#000'},
@@ -36,11 +36,14 @@ let theWheel = new Winwheel({
                 }
             });
             
+            
+            
             let wheelPower    = 10;
             let wheelSpinning = false;
             
             // Loads the tick audio sound in to an audio object.
-            let audio = new Audio('http://dougtesting.net//elements/sound/tick.mp3');
+            let audio = new Audio('assets/js/tick.mp3');
+            let audiowin = new Audio('assets/js/win.wav');
  
             // This function is called when the sound is to be played.
             function playSound()
@@ -53,27 +56,44 @@ let theWheel = new Winwheel({
                 audio.play();
             }
 
+            function calculatePrize()
+            {
+                // This formula always makes the wheel stop somewhere inside prize 3 at least
+                // 1 degree away from the start and end edges of the segment.
+                let stopAt = (1 + Math.floor((Math.random() * 40)))
+         
+                // Important thing is to set the stopAngle of the animation before stating the spin.
+                theWheel.animation.stopAngle = stopAt;
+         
+                // May as well start the spin from here.
+                theWheel.startAnimation();
+            }
+
              
 
-            function startSpin()
-          {
-            if (wheelSpinning == false) {
-              theWheel.animation.spins = 10;
-              theWheel.startAnimation();
-              wheelSpinning = true;
-            }
-          }
+          //   function startSpin()
+          // {
+          //   if (wheelSpinning == false) {
+          //     theWheel.animation.spins = 10;
+          //     theWheel.startAnimation();
+          //     wheelSpinning = true;
+          //   }
+          // }
  
             // Called when the animation has finished.
             function alertPrize(indicatedSegment)
             {
                 // Display different message if win/lose/backrupt.
-                if (indicatedSegment.text == 'LOOSE TURN') {
-                    alert('Sorry but you loose a turn.');
+                if (indicatedSegment.text == 'SURPRISE ME') {
+                    $('#winModal').modal('show');
+                    audiowin.play();
                 } else if (indicatedSegment.text == 'BANKRUPT') {
                     alert('Oh no, you have gone BANKRUPT!');
+                    audiowin.play();
                 } else {
                     alert("You have won " + indicatedSegment.text);
+                    // $('#winModal').modal('show')
+                    audiowin.play();
                 }
             }
 
