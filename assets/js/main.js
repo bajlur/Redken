@@ -1,22 +1,23 @@
 let theWheel = new Winwheel({
                 'outerRadius'     : 190,        // Set outer radius so wheel fits inside the background.
                 'innerRadius'     : 75,         // Make wheel hollow so segments dont go all way to center.
-                'textFontSize'    : 16,         // Set default font size for the segments.
+                'textFontFamily'  : 'helveticabold',
+                'textFontSize'    : 28,         // Set default font size for the segments.
                 'textOrientation' : 'curved', // Make text vertial so goes down from the outside of wheel.
                 'responsive'   : true,
-                'textAlignment'   : 'center',    // Align text to outside of wheel.
+                'textAlignment'   : 'inner',    // Align text to outside of wheel.
                 'numSegments'     : 8,         // Specify number of segments.
                 'pointerAngle' : 90,
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and text colour overridden on backrupt segments.
-                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : 'SURPRISE ME', 'textFontSize' : 14, 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010 VG', 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09 VG', 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08 VG', 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010 VG', 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09 VG', 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08 VG', 'textFillStyle' : '#000'},
-                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010 VG', 'textFillStyle' : '#000'}
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'textAlignment' : 'center', 'text' : 'SURPRISE\nME', 'textFontSize' : 20, 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'}
                 ],
                 'animation' :           // Specify the animation to use.
                 {
@@ -84,9 +85,15 @@ let theWheel = new Winwheel({
             function alertPrize(indicatedSegment)
             {
                 // Display different message if win/lose/backrupt.
-                if (indicatedSegment.text == 'SURPRISE ME') {
-                    $('#winModal').modal('show');
+                if (indicatedSegment.text == 'SURPRISE\nME') {
                     audiowin.play();
+                    setTimeout(function () {
+                      confetti.start();
+                    }, 100);
+                    $('#winModal').modal('show');
+                    setTimeout(function () {
+                      confetti.stop();
+                    }, 3000);
                 } else if (indicatedSegment.text == 'BANKRUPT') {
                     alert('Oh no, you have gone BANKRUPT!');
                     audiowin.play();
@@ -97,4 +104,4 @@ let theWheel = new Winwheel({
                 }
             }
 
-            
+     

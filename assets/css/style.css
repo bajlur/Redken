@@ -256,6 +256,10 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
         top: 50%;
         transform: translate(-50%, -52%);
     }
+    #party-js-canvas {
+      z-index: 999999;
+    }
+
     
 }
 @media only screen and (max-width: 600px) and (min-width: 590px)
