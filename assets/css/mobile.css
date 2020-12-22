@@ -25,7 +25,7 @@
 *{box-sizing: border-box;}
 body{margin: 0;padding: 0;font-family: 'helveticabold';}
 
-@media only screen and (max-width: 667px)
+@media only screen and (max-width: 991px)
 {
     .main-body
     {
@@ -181,7 +181,7 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
         content: '';
         position: absolute;
         top: 50%;
-        right: 63px;
+        right: 26%;
         width: 0;
         height: 0;
         border-style: solid;
@@ -190,7 +190,7 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
         transform: translateY(-50%);
     }
     .modal-dialog {
-        max-width: 98%;
+        max-width: 75%;
     }
     .modal-header
     {
@@ -261,6 +261,47 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
     }
 
     
+}
+@media only screen and (max-width: 900px)
+{
+    .spin-box::before
+    {
+        right: 23%;
+    }
+}
+@media only screen and (max-width: 840px)
+{
+    .spin-box::before
+    {
+        right: 21%;
+    }
+}
+@media only screen and (max-width: 800px)
+{
+    .spin-box::before {
+        right: 20%;
+    }
+}
+@media only screen and (max-width: 767px)
+{
+    .spin-box::before {
+        right: 18%;
+    }
+}
+@media only screen and (max-width: 700px)
+{
+    .spin-box::before {
+        right: 86px;
+    }
+}
+@media only screen and (max-width: 667px)
+{
+    .spin-box::before {
+        right: 69px;
+    }
+    .modal-dialog {
+        max-width: 95%;
+    }
 }
 @media only screen and (max-width: 600px) and (min-width: 590px)
 {
