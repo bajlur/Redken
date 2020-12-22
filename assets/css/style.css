@@ -196,11 +196,12 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
     transform: translateY(-50%);
 }
 .modal-dialog {
-    max-width: 52%;
+    max-width: 500px;
 }
 .modal-header
 {
     border-bottom: none;
+    padding: 0;
 }
 .modal-content {
     border: none;
@@ -225,9 +226,12 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';}
     padding: 0;
     border: none;
     height: 30px;
-    margin: -23px -13px 0 auto;
+    margin: 0;
     color: #fff;
     opacity: 1;
+    position: absolute;
+    right: 5px;
+    top: -4px;
 }
 .modal-body h1
 {
