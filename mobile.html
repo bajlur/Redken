@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <title>Redken Spin the Wheel</title>
+    <script type="text/javascript">
+        if (screen.width >= 992) {
+        document.location = "index.html";
+        }
+    </script>
+  </head>
+  <body>
+    
+    <div class="main-body">
+        <div class="logo">
+            <img src="assets/images/logo.jpg" alt="#" class="img-fluid"> 
+        </div>
+        
+        <div class="content-box">
+            <h1>Hey There <br>Blonde Boss <img src="assets/images/hand.jpg" alt="#" class="text-hand"></h1>
+            <h2>We Want you to be the first to try our <span>new</span> shades eq baby blonde toners!</h2>
+
+            <div class="btns-box text-center">
+                <button class="btn btn-tap" data-toggle="modal"  onClick="calculatePrize(); smoothScroll(document.getElementById('spin-box'));"><img src="assets/images/hand-cursor.png" alt="#" class="hand-cursor">Tap Here</button>
+            </div>
+
+            <h1 class="last-h1">To spin the <br> <span>Wheel of Shades</span></h1>
+            <h2>Which shade will it be? <br>Spin me to reveal one of three!</h2>
+
+            <img src="assets/images/spin-top-img.png" alt="#" class="img-fluid d-block spin-top-img">
+            <img src="assets/images/t.png" alt="#" class="img-fluid text-t">
+
+
+            <div class="spin-box text-center" id="spin-box">
+                <canvas id='canvas' class="canvas" width='400' height='400' onClick="calculatePrize();">
+                    Canvas not supported, use another browser.
+                </canvas>
+                <img src="assets/images/spin-middil-img.png" alt="#" class="spin-middil img-fluid" onClick="calculatePrize();">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="winModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1>It's Time <br> <span>To go Blonde</span><br><i>BABY</i></h1>
+            <div class="bg-white">
+                <h2>New Shades Eq Baby Blondes are here! i'm on the official trial team</h2>
+            </div>
+            <img src="assets/images/modal-img.jpg" alt="#" class="img-fluid">
+            <h2>Watch this space for my</h2>
+            <h1 class="mt-0"><i>blonde boss look</i></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/Winwheel.min.js"></script>
+    <script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/confetti.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        window.smoothScroll = function(target) {
+            var scrollContainer = target;
+            do { //find scroll container
+                scrollContainer = scrollContainer.parentNode;
+                if (!scrollContainer) return;
+                scrollContainer.scrollTop += 1;
+            } while (scrollContainer.scrollTop == 0);
+
+            var targetY = 0;
+            do { //find the top of target relatively to the container
+                if (target == scrollContainer) break;
+                targetY += target.offsetTop;
+            } while (target = target.offsetParent);
+
+            scroll = function(c, a, b, i) {
+                i++; if (i > 30) return;
+                c.scrollTop = a + (b - a) / 30 * i;
+                setTimeout(function(){ scroll(c, a, b, i); }, 20);
+            }
+            // start scrolling
+            scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+        }
+    </script>
+   
+  </body>
+</html>
