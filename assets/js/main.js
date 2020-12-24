@@ -22,7 +22,7 @@ let theWheel = new Winwheel({
                 'animation' :           // Specify the animation to use.
                 {
                     'type'     : 'spinToStop',
-                    'duration' : 10,
+                    'duration' : 5,
                     'spins'    : 5,
                     'callbackFinished' : alertPrize,  // Function to call whent the spinning has stopped.
                     'callbackSound'    : playSound,   // Called when the tick sound is to be played.
@@ -86,11 +86,12 @@ let theWheel = new Winwheel({
             {
                 // Display different message if win/lose/backrupt.
                 if (indicatedSegment.text == 'SURPRISE\nME') {
-                    audiowin.play();
                     setTimeout(function () {
+                      audiowin.play();
+                      $('#winModal').modal('show');
                       confetti.start();
-                    }, 100);
-                    $('#winModal').modal('show');
+                    }, 800);
+                    
                     setTimeout(function () {
                       confetti.stop();
                     }, 3000);
