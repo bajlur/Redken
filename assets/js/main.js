@@ -10,7 +10,7 @@ let theWheel = new Winwheel({
                 'pointerAngle' : 90,
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and text colour overridden on backrupt segments.
-                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'textAlignment' : 'center', 'text' : 'SURPRISE\nME', 'textFontSize' : 20, 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'textAlignment' : 'center', 'textMargin' : '0', 'text' : 'SURPRISE\nME', 'textFontSize' : 17, 'textFillStyle' : '#000'},
                    {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'},
                    {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09\nVG', 'textFillStyle' : '#000'},
                    {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08\nVG', 'textFillStyle' : '#000'},
