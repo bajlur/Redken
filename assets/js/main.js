@@ -1,16 +1,16 @@
 let theWheel = new Winwheel({
                 'outerRadius'     : 195,        // Set outer radius so wheel fits inside the background.
                 'innerRadius'     : 75,         // Make wheel hollow so segments dont go all way to center.
-                'textFontFamily'  : 'helveticabold',
                 'textFontSize'    : 28,         // Set default font size for the segments.
                 'textOrientation' : 'curved', // Make text vertial so goes down from the outside of wheel.
                 'responsive'   : true,
-                'textAlignment'   : 'inner',    // Align text to outside of wheel.
+                'textAlignment'   : 'center',    // Align text to outside of wheel.
+                'textMargin' : 0,
                 'numSegments'     : 8,         // Specify number of segments.
                 'pointerAngle' : 90,
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and text colour overridden on backrupt segments.
-                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'textAlignment' : 'center', 'textMargin' : 0, 'text' : 'SURPRISE\nME',  'textFontSize' : 18, 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'textAlignment'   : 'outer', 'textMargin' : 30, 'text' : 'SURPRISE\nME',  'textFontSize' : 20, 'textFillStyle' : '#000'},
                    {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'},
                    {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09\nVG', 'textFillStyle' : '#000'},
                    {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08\nVG', 'textFillStyle' : '#000'},
@@ -36,9 +36,7 @@ let theWheel = new Winwheel({
                     'responsive' : true
                 }
             });
-            
-            
-            
+            document.write( theWheel.segments[1].text.replace(/\s/g, '') );
             let wheelPower    = 10;
             let wheelSpinning = false;
             
