@@ -1,25 +1,23 @@
 let theWheel = new Winwheel({
                 'outerRadius'     : 195,        // Set outer radius so wheel fits inside the background.
                 'innerRadius'     : 75,         // Make wheel hollow so segments dont go all way to center.
-                
+                'textFontSize'    : 28,         // Set default font size for the segments.
                 'textOrientation' : 'curved', // Make text vertial so goes down from the outside of wheel.
-                'drawText'          : true,   
                 'responsive'   : true,
                 'textAlignment'   : 'center',    // Align text to outside of wheel.
                 'textMargin' : 0,
                 'numSegments'     : 8,         // Specify number of segments.
-                'drawMode'          : 'segmentImage', // Must be segmentImage to draw wheel using one image per segemnt.
                 'pointerAngle' : 90,
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and text colour overridden on backrupt segments.
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/mary.png', 'text' : '.', 'textFontSize'    : 0, 'textFillStyle' : '#ecadbc'},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/tom.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/tom.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/tom.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''}
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'textAlignment'   : 'outer', 'textMargin' : 30, 'text' : 'SURPRISE\nME',  'textFontSize' : 20, 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#edcfd7', 'strokeStyle' : 'transparent', 'text' : '09\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#faeff1', 'strokeStyle' : 'transparent', 'text' : '08\nVG', 'textFillStyle' : '#000'},
+                   {'fillStyle' : '#eea4b1', 'strokeStyle' : 'transparent', 'text' : '010\nVG', 'textFillStyle' : '#000'}
                 ],
                 'animation' :           // Specify the animation to use.
                 {
@@ -85,7 +83,7 @@ let theWheel = new Winwheel({
             function alertPrize(indicatedSegment)
             {
                 // Display different message if win/lose/backrupt.
-                if (indicatedSegment.text == '.') {
+                if (indicatedSegment.text == 'SURPRISE\nME') {
                     setTimeout(function () {
                       audiowin.play();
                       $('#winModal').modal('show');
