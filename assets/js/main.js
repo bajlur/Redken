@@ -12,14 +12,14 @@ let theWheel = new Winwheel({
                 'pointerAngle' : 90,
                 'segments'        :             // Define segments including colour and text.
                 [                               // font size and text colour overridden on backrupt segments.
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/mary.png', 'text' : '.', 'textFontSize'    : 0, 'textFillStyle' : '#ecadbc'},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/tom.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/tom.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/tom.png', 'text' : ''},
-                   {'image' : 'http://dougtesting.net/elements/images/tutorials/segments/jane.png', 'text' : ''}
+                   {'image' : 'assets/images/Surprise.png', 'text' : '.', 'textFontSize'    : 0, 'textFillStyle' : '#ecadbc'},
+                   {'image' : 'assets/images/010.png', 'text' : ''},
+                   {'image' : 'assets/images/09.png', 'text' : ''},
+                   {'image' : 'assets/images/08.png', 'text' : ''},
+                   {'image' : 'assets/images/010.png', 'text' : ''},
+                   {'image' : 'assets/images/09.png', 'text' : ''},
+                   {'image' : 'assets/images/08.png', 'text' : ''},
+                   {'image' : 'assets/images/010.png', 'text' : ''}
                 ],
                 'animation' :           // Specify the animation to use.
                 {
