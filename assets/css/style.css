@@ -269,6 +269,28 @@ body{margin: 0;padding: 0;font-family: 'helveticabold';background:#ecadbc; }
 #party-js-canvas {
   z-index: 999999;
 }
+#TcModal p
+{
+    font-size: 14px;
+}
+.submit-btn
+{
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 5px 8px;
+    background: #500927;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+.ok-btn
+{
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
 
 @media only screen and (max-width: 1024px)
 {
