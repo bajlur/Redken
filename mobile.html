@@ -59,6 +59,12 @@
                 <p><input type="checkbox" name="" id="Check2"> &nbsp;I transfer my Review Materials to the Promoter and agree for the Promoter to use it or extracts of it, together with my username and geographic location at its choice, in the Promoter’s marketing, PR or advertising materials, in both offline and online media.</p>
                 <p>Redken product samples available for review from time to time to review panellists.  GB, NI & ROI residents 18+ who are either (a) a hairdresser and employed by or own a professional high street hair salon that stocks Redken colour products or (b) a freelance hairdresser that uses Redken colour purchased from Redken and receive an invitation to sign up from Redken. Social Connection Club panel members are Redken’s most engaged fans and must have received the invitation to enter via an Instagram direct message from Redken inviting them to sign up Full <a href="https://www.redken.co.uk/terms-of-use" target="_blank">T&C</a>s </p>
                 <button class="submit-btn">Submit</button>
+                <div class="acpt_box_main" style="padding: 15px;background: #fff;position: absolute;top: 60px;left: 0;right: 0;">
+                    <div class="acpt_box" style="border: 2px solid #000;border-radius: 8px;padding: 8px">
+                        <p>Please tick both boxes to agree to the Social Connection Club Review panel T&Cs</p>
+                        <button class="ok-btn m-auto d-block">ok</button>
+                    </div>
+                </div>
             </div>
           </div>
         </div>
@@ -66,7 +72,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="NotAcpectModal" tabindex="-1" aria-labelledby="NotAcpectModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <!-- <div class="modal fade" id="NotAcpectModal" tabindex="-1" aria-labelledby="NotAcpectModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body" style="padding: 15px;background: #fff;">
@@ -77,7 +83,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Modal -->
     <div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="winModalLabel" aria-hidden="true">
@@ -137,13 +143,17 @@
         $(window).on('load', function() {
             $('#TcModal').modal('show');
         }); 
+        $('.acpt_box_main').hide();
         $(".submit-btn").click(function(){
             if ($("#Check1").is(":checked") && $("#Check2").is(":checked")) {
                $('#TcModal').modal('hide'); 
             }else{
-                $('#NotAcpectModal').modal('show');
+                $('.acpt_box_main').show();
             }
          return false;
+        });
+        $(".ok-btn").click(function(){
+            $('.acpt_box_main').hide();
         });
 
     </script>
