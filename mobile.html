@@ -16,7 +16,7 @@
     </script>
   </head>
   <body>
-    
+    <div class="loader"></div>
     <div class="main-body">
         <div class="logo">
             <img src="assets/images/logo.jpg" alt="#" class="img-fluid"> 
@@ -108,7 +108,7 @@
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/Winwheel.min.js"></script>
@@ -140,6 +140,9 @@
         }
     </script>
     <script>
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        });
         $(window).on('load', function() {
             $('#TcModal').modal('show');
         }); 
